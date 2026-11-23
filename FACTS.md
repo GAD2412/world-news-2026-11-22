@@ -53,6 +53,12 @@ Peru quake (21), Wall Street correction (Fri 20).
 26. Chess: Gukesh v Sindarov world title match opens in Geneva (ceremony 22 Nov, game 1 on 24 Nov). C — Al Jazeera · FIDE
 27. Gulf: Saudi Arabia, Kuwait and Qatar condemn Iran's attack on Bahrain (statements Sunday). C — ABC News · Wikipedia/MEE
 28. US–Iran: Trump tells Fox he is "inclined" to resume strikes after New Year if no deal. C — Anadolu · The Hill · Fox News · Bloomberg
+29. Libya: eastern-based PM Osama Hammad (Sunday) asks UN General Assembly and Security Council for an international probe. C — Al Jazeera · Guardian
+30. Hormuz: IRGC claims it shot down a US MQ-1 Predator east of the strait; CENTCOM did not comment. CLAIM — ABC News (IRNA) · Reuters via syndication
+31. Japan: main hall of Okinawa's Shuri Castle restored seven years after the 2019 fire; completion ceremony 22 Nov, public opening 23 Nov.
+    C — nippon.com/Jiji 22 Nov · The Standard (HK) · nippon.com June schedule
+
+The UN Libya mission's call for an independent investigation was posted early Monday 23 Nov, so it is not on the image.
 
 Dropped after checking: West Bank settler arson (Saturday night), Seattle airport ICE arrests (Saturday), Microsoft outage
 warning and COP32 hand-over (no second source).

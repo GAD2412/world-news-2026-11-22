@@ -21,7 +21,7 @@ REGIONS = {  # region -> colour
     'MIDDLE EAST': (190, 52, 44),
     'EUROPE': (38, 92, 170),
     'AFRICA': (205, 125, 20),
-    'AMERICAS': (120, 58, 150),
+    'AMERICAS': (128, 48, 168),
     'SOUTH ASIA': (200, 70, 130),
     'EAST ASIA': (18, 140, 120),
     'GLOBAL': (40, 120, 60),
@@ -99,11 +99,11 @@ rect(0, 0, W, 112, fill=NAVY)
 DATE_SIZE = 62
 assert tw('SUNDAY 22 NOVEMBER 2026', 'heavy', DATE_SIZE) < 770
 text(20, 8, 'SUNDAY 22 NOVEMBER 2026', 'heavy', DATE_SIZE, (255, 255, 255))
-text(22, 84, "THE WORLD'S NEWS IN ONE IMAGE   ·   28 STORIES   ·   7 REGIONS   ·   12 FIELDS", 'demi', 17, GOLD)
+text(22, 84, "THE WORLD'S NEWS IN ONE IMAGE   ·   31 STORIES   ·   7 REGIONS   ·   12 FIELDS", 'demi', 17, GOLD)
 # date check box
 rect(800, 12, 1008, 100, fill=(28, 50, 86), outline=GOLD, width=2, r=6)
 text(811, 17, 'DATE CHECK', 'heavy', 18, GOLD)
-para(811, 40, 'Every story happened or was first reported on Sun 22 Nov 2026 (any time zone). Saturday-only events left out.',
+para(811, 40, 'Every story happened or was first reported on 22 Nov 2026 (UTC or local time). Earlier events left out.',
      'reg', 11, 190, 14, (235, 238, 245), 4)
 
 # ---------------------------------------------------------------- UTC timeline
@@ -150,18 +150,18 @@ LW = 322
 LEADS = [
     dict(region='GLOBAL', tag='GLOBAL · CLIMATE · ANTALYA, TURKEY', art='cop',
          head='COP31 climate summit collapses without a deal',
-         dek='After two days of overtime, the EU, UK and island states reject a final text that does not even mention '
-             'fossil fuels. UN chief Guterres: "deeply disappointed". Longest climate summit on record.',
+         dek='After two days of overtime, the EU, UK and island states reject a text that does not mention fossil '
+             'fuels. Guterres "deeply disappointed". Longest COP on record.',
          src='UN News · NPR · Guardian · Al Jazeera · AFP'),
     dict(region='AFRICA', tag='LIBYA · RUSSIA-UKRAINE WAR · BENGHAZI', art='ship',
          head='Russian warship sinks at Benghazi after drone attack',
-         dek='Suspected Ukrainian sea drones hit the navy corvette Merkury in port before dawn; satellite images show it '
-             'capsized. A Malta-flagged cargo ship is also hit off Benghazi that evening.',
+         dek='Suspected Ukrainian sea drones hit the navy corvette Merkury in port before dawn; satellite images '
+             'show it capsized. No one claims the attack.',
          src='Reuters · Guardian · Al Jazeera'),
     dict(region='MIDDLE EAST', tag='IRAN · GULF · BAHRAIN, HORMUZ', art='gulf',
          head='Bahrain: 2 wounded by Iranian strike; IRGC claims US targets',
-         dek='Iran\'s Guards say they hit US Patriot radar sites in Bahrain and downed a US Predator drone near Hormuz '
-             '(US: no comment). Saudi Arabia, Kuwait and Qatar condemn Iran.',
+         dek='Bahrain says Saturday\'s strike on an industrial site in Sitra wounded two, one critically. '
+             'Iran\'s Guards say they targeted US Patriot radar sites.',
          src='ABC News · Middle East Eye · Reuters'),
 ]
 
@@ -258,16 +258,16 @@ for i, L in enumerate(LEADS):
     c = REGIONS[L['region']]
     rect(x, LY, x + LW, LY + 4, fill=c)
     text(x, LY + 8, L['tag'], 'bold', 11, c)
-    ARTS[L['art']](x, LY + 24, LW, 140)
-    yy = para(x, LY + 168, L['head'], 'heavy', 23, LW, 25, INK, 2)
-    yy = para(x, yy + 3, L['dek'], 'reg', 12, LW, 15, (40, 42, 48), 4)
+    ARTS[L['art']](x, LY + 24, LW, 132)
+    yy = para(x, LY + 160, L['head'], 'heavy', 23, LW, 25, INK, 2)
+    yy = para(x, yy + 3, L['dek'], 'reg', 12, LW, 15, (40, 42, 48), 3)
     mark(x, yy + 4, True, c)
     text(x + 12, yy + 2, L['src'], 'med', 10, GREY)
 
 # ---------------------------------------------------------------- cards
-CY = 492
+CY = 472
 d.line(P(16, CY - 6, W - 16, CY - 6), fill=INK, width=2 * S)
-CW, CH, CG = 191.2, 122, 6
+CW, CH, CG = 191.2, 118, 6
 CARDS = [
     ('EUROPE', 'UKRAINE · WAR', '14+', 'killed', 'Russian strikes hit Kyiv region; Dymer apartment block partly collapses', True),
     ('AFRICA', 'SUDAN · WAR', '4', 'killed', 'RSF drones hit Khartoum area; a UN building damaged', True),
@@ -292,16 +292,18 @@ for k, (reg, tag, fig, unit, head, sure) in enumerate(CARDS):
     text(x + 8, y + 20, fig, 'heavy', fsize, c)
     if unit:
         text(x + 12 + tw(fig, 'heavy', fsize), y + 20 + fsize * 0.62, unit, 'demi', 12, GREY)
-    para(x + 8, y + 60, head, 'bold', 14, CW - 16, 16, INK, 3)
+    para(x + 8, y + 58, head, 'bold', 15, CW - 16, 17, INK, 3)
 
 # ---------------------------------------------------------------- briefs
-BY = 752
+BY = 724
 d.line(P(16, BY - 4, W - 16, BY - 4), fill=INK, width=2 * S)
 text(16, BY + 1, 'ALSO ON 22 NOVEMBER', 'heavy', 14, NAVY)
 BRIEFS = [
     ('EUROPE', 'Ukraine:', 'Zelenskyy says Russia fired ~2,700 drones and 165 missiles in a week; asks US for Patriots', True),
     ('AFRICA', 'Libya:', 'Malta-flagged merchant ship hit by sea drones off Benghazi; crew rescued', True),
+    ('AFRICA', 'Libya:', 'eastern-based PM Hammad asks the UN for an international probe of the attacks', True),
     ('MIDDLE EAST', 'Hormuz:', 'IRGC says 2 tankers hit sea mines; UKMTO probes tanker incident in Gulf of Oman', False),
+    ('MIDDLE EAST', 'Hormuz:', 'IRGC claims it shot down a US MQ-1 Predator drone; no US comment', False),
     ('MIDDLE EAST', 'Iran:', 'state TV shows a dual-missile launcher in an underground "missile city"', True),
     ('MIDDLE EAST', 'Yemen:', 'Saudi coalition downs Houthi drone and missile; Houthis say 6 hurt in Sanaa strike', True),
     ('GLOBAL', 'Weapons:', 'Red Cross warns it will soon be too late to regulate autonomous weapons', True),
@@ -309,7 +311,8 @@ BRIEFS = [
     ('AMERICAS', 'AI chips:', 'US lawmakers on Sunday TV demand answers on how top Nvidia chips reached China', True),
     ('SOUTH ASIA', 'Bangladesh:', 'garment workers in Gazipur try to block Dhaka highway in wage protest', True),
     ('EAST ASIA', 'Taiwan:', 'Hong Kong film "We Are Born Good" wins best feature at Golden Horse Awards', True),
-    ('AMERICAS', 'F1:', 'Verstappen wins Las Vegas GP (Sat night local) after 35 lead changes', True),
+    ('EAST ASIA', 'Japan:', "Okinawa's Shuri Castle main hall restored, 7 years after the 2019 fire", True),
+    ('AMERICAS', 'F1:', 'Verstappen wins Las Vegas GP (race 04:00 UTC) after 35 lead changes', True),
     ('AMERICAS', 'Mexico:', 'NFL returns to Mexico City: 49ers beat Vikings 35-10', True),
     ('EUROPE', 'Chess:', 'Gukesh v Sindarov world title match opens in Geneva; game 1 on 24 Nov', True),
     ('MIDDLE EAST', 'Gulf:', 'Saudi Arabia, Kuwait and Qatar condemn Iran over Bahrain strike', True),
@@ -317,9 +320,9 @@ BRIEFS = [
 ]
 BW = 322
 for k, (reg, lead, body, sure) in enumerate(BRIEFS):
-    col, row = k // 5, k % 5
+    col, row = k // 6, k % 6
     x = 16 + col * (BW + 12)
-    y = BY + 22 + row * 42
+    y = BY + 22 + row * 38
     c = REGIONS[reg]
     mark(x, y + 4, sure, c)
     lead_w = tw(lead + ' ', 'hbold', 12)
@@ -331,7 +334,8 @@ for k, (reg, lead, body, sure) in enumerate(BRIEFS):
         para(x + 13, y + 15, rest, 'reg', 12, BW - 14, 15, INK, 1)
 
 # ---------------------------------------------------------------- footer
-FY = 984
+assert len(LEADS) + len(CARDS) + len(BRIEFS) == 31 and len(BRIEFS) == 18
+FY = 980
 d.line(P(16, FY, W - 16, FY), fill=INK, width=S)
 x = 16
 for reg, c in REGIONS.items():
@@ -347,6 +351,6 @@ text(16, FY + 24, 'Sources: Reuters, AP, AFP, Al Jazeera, The Guardian, NPR, UN 
      'Focus Taiwan, TBS (Dhaka), Middle East Eye. Full list in FACTS.md.', 'reg', 10, GREY)
 
 out = img.resize((W, H), Image.LANCZOS)
-out = out.quantize(colors=128, method=Image.MEDIANCUT, dither=Image.NONE)
+out = out.quantize(colors=224, method=Image.MEDIANCUT, dither=Image.NONE)
 out.save('entry.png', optimize=True)
 print('wrote entry.png')

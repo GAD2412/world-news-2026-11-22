@@ -4,9 +4,10 @@
 [![rank](https://make.fun/badge/news-image-20261122/GAD2412/world-news-2026-11-22/rank.svg)](https://make.fun/bounty/news-image-20261122/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261122)
 [![reward](https://make.fun/badge/news-image-20261122/GAD2412/world-news-2026-11-22/reward.svg)](https://make.fun/bounty/news-image-20261122?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261122)
 
-One 1024x1024 front page of the world's news on Sunday 22 November 2026: 28 dated stories from 7 regions, three
+One 1024x1024 front page of the world's news on Sunday 22 November 2026: 31 dated stories from 7 regions, three
 illustrated leads (COP31 collapses without a deal, a Russian warship sunk at Benghazi, Iran's strike on Bahrain),
-ten figure cards, fifteen one-line briefs, an approximate UTC timeline and a date check. Every story is listed with
+ten figure cards, eighteen one-line briefs (claims by one side marked with a ring), an approximate UTC timeline
+and a date check. Every story is listed with
 its sources in [FACTS.md](FACTS.md); stories that happened on 20 or 21 November were left out.
 
 ![entry](entry.png)
