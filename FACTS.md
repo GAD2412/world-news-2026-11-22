@@ -60,5 +60,27 @@ Peru quake (21), Wall Street correction (Fri 20).
 
 The UN Libya mission's call for an independent investigation was posted early Monday 23 Nov, so it is not on the image.
 
+## Added in v3 (37 stories; numbers on the image differ from the list above)
+
+32. Ukraine: Russia launched 186 drones (72 jet-powered) overnight into 22 Nov; air force says 161 downed or jammed by 08:00
+    Kyiv time; hits at 18 locations. C — Ukrainian Air Force via UAWire, Kyiv Independent, Yahoo/Ukrinform, ua.news
+33. Iran: Tavanir starts scheduled power cuts on Sunday 22 Nov, about two hours at a time, over gas shortages from war damage.
+    C — Iran International 202611223193 · Shafaq News · The National
+34. Cricket: India declare on 720/9 in Wellington (Rahul 136, Pant 128), the highest Test total in New Zealand; lead 352.
+    C — The Statesman · Telangana Today (IANS) · Dainik Jagran
+35. Vatican: Pope Leo XIV shares lunch with about 1,300 poor guests in the Paul VI Hall, 10th World Day of the Poor (Sun 22 Nov).
+    C — Vatican News 2026-11 · EWTN News · CathNews
+36. India/Nepal: Nepal PM Balendra Shah arrives in New Delhi on 22 Nov for his first bilateral visit since taking office.
+    C — Deccan Herald · NewsBytes · ZoomNews (MEA programme)
+37. Australia: Defence Minister Richard Marles tells ABC Insiders (Sun 22 Nov) the US budget office is "wrong" on AUKUS.
+    C — ABC News 2026-11-22 · Investing.com (Reuters) · Marine Insight
+38. Colombia: the government (MinTIC letter dated 22 Nov) asks X to suspend ex-president Gustavo Petro's account.
+    C — CNN Español/EFE 2026-11-22 · Infobae 2026-11-22
+39. Guterres: "no ambiguity in the science" as COP31 ends without a pact. C — UN News 1168855 · UN Türkiye
+
+Day in numbers and UTC strip: 186 drones / 161 downed (06:00 UTC = 08:00 Kyiv); HK polls 09:00 HKT = 01:00 UTC;
+Las Vegas GP start 20:00 PST = 04:00 UTC; MotoGP, COP31 close, US House call and ATP final times are marked "~" (approximate,
+from report times). Date check: Bolsonaro was taken into intensive care on Fri 20 Nov (Al Jazeera 2026/11/21), so he is left out.
+
 Dropped after checking: West Bank settler arson (Saturday night), Seattle airport ICE arrests (Saturday), Microsoft outage
 warning and COP32 hand-over (no second source).
