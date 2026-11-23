@@ -78,6 +78,20 @@ The UN Libya mission's call for an independent investigation was posted early Mo
     C — CNN Español/EFE 2026-11-22 · Infobae 2026-11-22
 39. Guterres: "no ambiguity in the science" as COP31 ends without a pact. C — UN News 1168855 · UN Türkiye
 
+## Added in v4 (40 stories)
+
+40. China: commerce ministry (Sun 22 Nov) calls the FCC order barring China Mobile, China Telecom and China Unicom from
+    US phone-number resources "malicious". C — Free Malaysia Today (Reuters) 2026/11/22 · NST · Manila Times
+41. Asia Power Index 2026 (Lowy Institute, published 22 Nov): US 78.9 v China 73.6, the narrowest gap since 2018.
+    C — Lowy Institute report · EurAsian Times · NewsBytes
+42. SpaceX Falcon 9 launches NROL-136 for the NRO from Vandenberg SLC-4E at 12:23 UTC, 32 h 3 min after the pad's previous
+    launch, its fastest turnaround. C — Space.com · KEYT · Technology.org
+
+Date-check additions (left out as earlier news): Somalia expels the UAE ambassador (Thu 19; Xinhua, Bangkok Post),
+Estonia announces closing road crossings with Russia from 1 Dec (Fri 20; RTE, ERR), ~1,400 stranded by snow in Kitashiobara,
+Fukushima (Sat 21; Bernama, Kyodo via Tribune), M5.9 quake in the Sulu Sea off Palawan (Sat 21, 09:54 UTC; VolcanoDiscovery,
+QuakeMap24). Also left out: Kenya's last Ebola discharge (11 Nov), Sudan army gains in Kordofan (13-17 Nov).
+
 Day in numbers and UTC strip: 186 drones / 161 downed (06:00 UTC = 08:00 Kyiv); HK polls 09:00 HKT = 01:00 UTC;
 Las Vegas GP start 20:00 PST = 04:00 UTC; MotoGP, COP31 close, US House call and ATP final times are marked "~" (approximate,
 from report times). Date check: Bolsonaro was taken into intensive care on Fri 20 Nov (Al Jazeera 2026/11/21), so he is left out.

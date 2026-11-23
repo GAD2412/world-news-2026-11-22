@@ -186,12 +186,15 @@ BRIEFS = [  # region, place, text, outlet, status
     ('ASIA-PACIFIC', 'Taipei', 'HK film "We Are Born Good" wins Golden Horse best film', 'Focus Taiwan', 'CONFIRMED'),
     ('ASIA-PACIFIC', 'Okinawa', 'Shuri Castle main hall restored, 7 years after fire', 'Jiji', 'CONFIRMED'),
     ('ASIA-PACIFIC', 'Canberra', 'Marles says US budget office "wrong" on AUKUS', 'ABC (Aus)', 'CONFIRMED'),
+    ('ASIA-PACIFIC', 'Beijing', 'calls US curb on 3 Chinese carriers "malicious"', 'Reuters', 'CONFIRMED'),
+    ('ASIA-PACIFIC', 'Sydney', 'Lowy index: US lead over China in Asia at record low', 'Lowy', 'CONFIRMED'),
+    ('GLOBAL', 'Space', 'Falcon 9 flies NRO mission 32 h after last pad launch, a record', 'Space.com', 'CONFIRMED'),
     ('GLOBAL', 'Weapons', 'Red Cross: soon too late to regulate autonomous arms', 'Guardian', 'CONFIRMED'),
     ('GLOBAL', 'Geneva', 'Gukesh v Sindarov world chess title match opens', 'Al Jazeera', 'CONFIRMED'),
     ('GLOBAL', 'Climate', 'Guterres: "no ambiguity in the science" after COP31', 'UN News', 'CONFIRMED'),
 ]
 STORIES = len(LEADS) + len(CARDS) + len(BRIEFS)
-assert STORIES == 37, STORIES
+assert STORIES == 40, STORIES
 counts = {r: 0 for r in REGIONS}
 for s in LEADS + CARDS:
     counts[s['region']] += 1
@@ -200,7 +203,7 @@ for b in BRIEFS:
 
 # ------------------------------------------------------------------ top rail and masthead
 rect(0, 0, W, 18, fill=NAVY)
-text(14, 3.5, 'THE WORLD IN ONE DAY', 'heavy', 10.5, (255, 255, 255))
+text(14, 3.5, 'THE WORLD IN ONE DAY  ·  FINAL EDITION: OUTCOMES, NOT PREVIEWS', 'heavy', 10.5, (240, 200, 100))
 text(W - 14, 3.5, '%d STORIES · 7 REGIONS · EVERY ONE DATED SUNDAY 22 NOVEMBER 2026' % STORIES,
      'heavy', 10.5, (255, 255, 255), 'ra')
 MAST = 'Sunday 22 November 2026'
@@ -229,7 +232,11 @@ x = 14
 for i, (reg, c) in enumerate(REGIONS.items()):
     w = (W - 28) * counts[reg] / STORIES
     rect(x, 171, x + w, 186, fill=c)
-    text(x + w / 2, 172.5, '%s %d' % (reg, counts[reg]), 'heavy', 9.5, (255, 255, 255), 'ma')
+    lab = '%s %d' % (reg, counts[reg])
+    if tw(lab, 'heavy', 9.5) > w - 6:
+        lab = '%s %d' % ({'SOUTH ASIA': 'S. ASIA', 'ASIA-PACIFIC': 'ASIA-PAC'}.get(reg, reg[:4]), counts[reg])
+    assert tw(lab, 'heavy', 9.5) <= w - 4, lab
+    text(x + w / 2, 172.5, lab, 'heavy', 9.5, (255, 255, 255), 'ma')
     x += w
 
 # ------------------------------------------------------------------ UTC strip
@@ -500,7 +507,7 @@ for k, C in enumerate(CARDS):
     text(x + 6, y + 114, C['src'], 'med', 8.5, GREY)
 
 # ------------------------------------------------------------------ map with numbered pins
-MX0, MY0, MW, MH = 14, 738, 300, 168
+MX0, MY0, MW, MH = 14, 738, 300, 182
 text(MX0, 722, 'WHERE IT HAPPENED', 'heavy', 11, NAVY)
 text(MX0 + 110, 723.5, 'pins = story numbers 1-15', 'med', 9, GREY)
 rect(MX0, MY0, MX0 + MW, MY0 + MH, fill=(226, 234, 242))
@@ -541,19 +548,38 @@ for gy in range(2, MH, 5):
     for gx in range(2, MW, 5):
         if mask.getpixel((gx, gy)):
             ell(MX0 + gx, MY0 + gy, 1.5, 1.5, fill=(150, 160, 175))
-for s in LEADS + CARDS:
-    px, py = mp(*s['ll'])
-    ell(px, py, 6, 6, fill=REGIONS[s['region']], outline=(255, 255, 255), width=1)
-    text(px, py + 0.5, str(s['n']), 'heavy', 7.5, (255, 255, 255), 'mm')
+# pins: start at the true spot, push overlapping pins apart, then draw a short leader back to the spot
+pins = [[*mp(*s['ll']), *mp(*s['ll']), s] for s in LEADS + CARDS]
+for _ in range(120):
+    for a in pins:
+        for b in pins:
+            if a is b:
+                continue
+            dx, dy = a[0] - b[0], a[1] - b[1]
+            dist = (dx * dx + dy * dy) ** 0.5
+            if dist < 13.5:
+                if dist < 1e-6:
+                    dx, dy, dist = (1.0, 0.3, 1.0) if a[4]['n'] > b[4]['n'] else (-1.0, -0.3, 1.0)
+                push = (13.5 - dist) / 2
+                a[0] += dx / dist * push
+                a[1] += dy / dist * push
+        a[0] = min(max(a[0], MX0 + 7), MX0 + MW - 7)
+        a[1] = min(max(a[1], MY0 + 7), MY0 + MH - 7)
+for px, py, ox, oy, s in pins:
+    ell(ox, oy, 1.8, 1.8, fill=INK)
+    line([(ox, oy), (px, py)], INK, 0.8)
+for px, py, ox, oy, s in pins:
+    ell(px, py, 6.5, 6.5, fill=REGIONS[s['region']], outline=(255, 255, 255), width=1)
+    text(px, py + 0.5, str(s['n']), 'heavy', 8, (255, 255, 255), 'mm')
 
 # ------------------------------------------------------------------ briefs
 BX = 330
 text(BX, 722, 'ALSO ON SUNDAY 22 NOVEMBER — %d MORE STORIES' % len(BRIEFS), 'heavy', 11, NAVY)
 BCW = (W - 14 - BX - 12) / 2
 for k, (reg, place, body, outlet, status) in enumerate(BRIEFS):
-    col, row = k // 11, k % 11
+    col, row = k // 13, k % 13
     x = BX + col * (BCW + 12)
-    y = 739 + row * 15.4
+    y = 739 + row * 14.2
     c = REGIONS[reg]
     n = 16 + k
     text(x, y, str(n), 'heavy', 10.5, c)
@@ -568,15 +594,16 @@ for k, (reg, place, body, outlet, status) in enumerate(BRIEFS):
     assert xx <= x + BCW + 1, (body, xx - x - BCW)
 
 # ------------------------------------------------------------------ date check and footer
-rect(14, 912, W - 14, 990, fill=(253, 240, 238), outline=RED, width=1.5)
-text(24, 918, 'DATE CHECK', 'heavy', 12, RED)
-para(110, 918.5, 'Every story on this page happened, or was first reported, on Sunday 22 November 2026 in UTC or local '
-     'time; wires and official statements read to the end of the day.', 'reg', 10.5, W - 14 - 120, 13, INK, 2)
-text(24, 948, 'LEFT OUT AS EARLIER NEWS:', 'heavy', 10, RED)
-para(150, 948.5, "Nigeria funeral-boat capsizing (Fri 20) · Bolsonaro taken into intensive care (Fri 20) · Brazil "
-     "Tupanciretã storm (Fri 20) · 'El Chapo Isidro' captured in Sinaloa (Sat 21) · Indonesia candy-factory fire broke "
-     "out (Sat 21) · Sparta II hit by drone off Finland (Sat 21) · West Bank settler arson (Sat night) · NWSL final (Sat 21)",
-     'reg', 10, W - 14 - 160, 12.5, INK, 3)
+rect(14, 926, W - 14, 990, fill=(253, 240, 238), outline=RED, width=1.5)
+text(22, 931, 'DATE CHECK', 'heavy', 12, RED)
+text(100, 932, 'Every story happened, or was first reported, on Sunday 22 Nov 2026 (UTC or local time). Final edition: '
+     'results read to the end of the day, so outcomes are shown, not previews.', 'med', 10.5, INK)
+text(22, 947, 'LEFT OUT AS EARLIER NEWS:', 'heavy', 10, RED)
+para(150, 947, "Somalia expels UAE envoy (Thu 19) · Estonia to shut Russia road crossings (Fri 20) · Nigeria funeral-boat "
+     "capsizing (Fri 20) · Bolsonaro taken into intensive care (Fri 20) · Brazil Tupanciretã storm (Fri 20) · 'El Chapo "
+     "Isidro' captured in Sinaloa (Sat 21) · Indonesia candy-factory fire broke out (Sat 21) · Sparta II hit by drone off "
+     "Finland (Sat 21) · Fukushima snow strands ~1,400 (Sat 21) · Palawan M5.9 quake (Sat 21) · West Bank settler arson "
+     "(Sat night) · NWSL final (Sat 21)", 'med', 10, W - 14 - 156, 12.5, INK, 3)
 x = 14
 y = 996
 for reg, c in REGIONS.items():

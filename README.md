@@ -4,9 +4,10 @@
 [![rank](https://make.fun/badge/news-image-20261122/GAD2412/world-news-2026-11-22/rank.svg)](https://make.fun/bounty/news-image-20261122/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261122)
 [![reward](https://make.fun/badge/news-image-20261122/GAD2412/world-news-2026-11-22/reward.svg)](https://make.fun/bounty/news-image-20261122?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261122)
 
-One 1024x1024 front page of the world's news on Sunday 22 November 2026: 37 dated stories from 7 regions. Three
-drawn leads (COP31 ends with no deal, a Russian warship sunk at Benghazi, 186 Russian drones over Ukraine), twelve
-drawn cards, a day-in-numbers row, a region bar, a UTC strip, a numbered locator map, 22 one-line briefs each with
+One 1024x1024 front page of the world's news on Sunday 22 November 2026, final edition: 40 dated stories from 7
+regions, with outcomes rather than previews. Three drawn leads (COP31 ends with no deal, a Russian warship sunk at
+Benghazi, 186 Russian drones over Ukraine), twelve drawn cards, a day-in-numbers row, a region bar, a UTC strip, a
+numbered locator map whose pins are spread out with leader lines, 25 one-line briefs each with
 its outlet, CONFIRMED/CLAIM tags, and a date check that names the earlier events left out. Every story is listed with
 its sources in [FACTS.md](FACTS.md); stories that happened on 20 or 21 November were left out.
 
