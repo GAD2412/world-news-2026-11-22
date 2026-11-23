@@ -99,6 +99,19 @@ Gulf-condemnation brief were dropped to make room; the Pope's lunch and the Nepa
 UTC table adds the Falcon 9 NROL-136 lift-off at 12:23 UTC (Space.com, KEYT). Card figures: Bahrain "2 hurt" (Bahrain
 interior ministry via MEE), Khartoum "4 dead" (Al Jazeera, AFP).
 
+## v6 (35 stories, 19 fields)
+
+- Middle East card now uses only Sunday statements: IRGC (via IRNA, Sunday) claims it shot down a US MQ-1 east of Hormuz,
+  CENTCOM did not comment (ABC News live 22 Nov; Reuters via syndication); Bahrain's interior ministry said on Sunday two
+  people were hurt (MEE); Saudi Arabia, Kuwait and Qatar issued condemnations on Sunday (ABC). Saturday's strike itself is
+  no longer framed as the story. The Shuri Castle restoration brief returns.
+- Every lead and card shows its field and when it happened (from the times above): COP31 close Sunday afternoon
+  (UN News 14:37 UTC report), Benghazi before dawn Sunday (Al Jazeera "at dawn"), Kyiv overnight into Sunday, Khartoum early
+  Sunday, Hong Kong 01-10 UTC (09:00-18:00 HKT), Turin final Sunday evening, Wellington Sunday NZ time.
+- Status tags: CONFIRMED (2+ outlets), OFFICIAL (on the record: Ukrainian Air Force, WHO, HK government, Tavanir, Vatican,
+  Zelenskyy, Libya's eastern government, Colombia's ICT ministry, China's commerce ministry), CLAIM (one side's account).
+- Peru's M6.7 quake was not added to the date check: its date could not be confirmed from a primary source.
+
 Day in numbers and UTC strip: 186 drones / 161 downed (06:00 UTC = 08:00 Kyiv); HK polls 09:00 HKT = 01:00 UTC;
 Las Vegas GP start 20:00 PST = 04:00 UTC; MotoGP, COP31 close, US House call and ATP final times are marked "~" (approximate,
 from report times). Date check: Bolsonaro was taken into intensive care on Fri 20 Nov (Al Jazeera 2026/11/21), so he is left out.

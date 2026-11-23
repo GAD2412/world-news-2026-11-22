@@ -5,7 +5,8 @@
 [![reward](https://make.fun/badge/news-image-20261122/GAD2412/world-news-2026-11-22/reward.svg)](https://make.fun/bounty/news-image-20261122?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261122)
 
 One 1024x1024 front page of the world's news on Sunday 22 November 2026, final edition: 35 dated stories from 7
-regions, with outcomes rather than previews, set large enough to read when shrunk. Three drawn leads (COP31 ends with
+regions and 19 fields, with outcomes rather than previews, set large enough to read when shrunk. Every lead and card
+carries its field, when it happened and a CONFIRMED / OFFICIAL / CLAIM tag. Three drawn leads (COP31 ends with
 no deal, a Russian warship sunk at Benghazi, 186 Russian drones over Ukraine), ten drawn cards with a key figure, a
 short summary and sources, a UTC table, a day-in-numbers row, a region bar, a numbered locator map whose pins are
 spread out with leader lines, 22 one-line briefs each with
