@@ -49,7 +49,7 @@ Peru quake (21), Wall Street correction (Fri 20).
 22. Bangladesh: garment workers in Gazipur try to block Dhaka–Mymensingh highway over wages. C — TBS 22 Nov · Daily Star
 23. Taiwan: Hong Kong film "We Are Born Good" wins best feature at 63rd Golden Horse Awards. C — Focus Taiwan · Screen Daily · AFP
 24. F1: Verstappen wins Las Vegas GP (race 04:00 UTC Sun, Sat night local), 35 lead changes. C — Al Jazeera · Guardian
-25. NFL in Mexico City: 49ers beat Vikings 35-10 (Sun night). C — Noticias MXM · ABC Color
+25. NFL in Mexico City: 49ers beat Vikings 35-10 (Sun 22 Nov 19:20 local, 01:20 UTC 23 Nov). C — ESPN game 401873077 · Noticias MXM · ABC Color
 26. Chess: Gukesh v Sindarov world title match opens in Geneva (ceremony 22 Nov, game 1 on 24 Nov). C — Al Jazeera · FIDE
 27. Gulf: Saudi Arabia, Kuwait and Qatar condemn Iran's attack on Bahrain (statements Sunday). C — ABC News · Wikipedia/MEE
 28. US–Iran: Trump tells Fox he is "inclined" to resume strikes after New Year if no deal. C — Anadolu · The Hill · Fox News · Bloomberg
