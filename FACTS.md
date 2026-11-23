@@ -92,6 +92,13 @@ Estonia announces closing road crossings with Russia from 1 Dec (Fri 20; RTE, ER
 Fukushima (Sat 21; Bernama, Kyodo via Tribune), M5.9 quake in the Sulu Sea off Palawan (Sat 21, 09:54 UTC; VolcanoDiscovery,
 QuakeMap24). Also left out: Kenya's last Ebola discharge (11 Nov), Sudan army gains in Kordofan (13-17 Nov).
 
+## v5 (35 stories)
+
+Same sourced stories as v4, set larger for legibility: the Shuri Castle, Lowy index, chess and Guterres-quote briefs and the
+Gulf-condemnation brief were dropped to make room; the Pope's lunch and the Nepal PM visit moved from cards to briefs.
+UTC table adds the Falcon 9 NROL-136 lift-off at 12:23 UTC (Space.com, KEYT). Card figures: Bahrain "2 hurt" (Bahrain
+interior ministry via MEE), Khartoum "4 dead" (Al Jazeera, AFP).
+
 Day in numbers and UTC strip: 186 drones / 161 downed (06:00 UTC = 08:00 Kyiv); HK polls 09:00 HKT = 01:00 UTC;
 Las Vegas GP start 20:00 PST = 04:00 UTC; MotoGP, COP31 close, US House call and ATP final times are marked "~" (approximate,
 from report times). Date check: Bolsonaro was taken into intensive care on Fri 20 Nov (Al Jazeera 2026/11/21), so he is left out.

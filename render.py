@@ -142,59 +142,72 @@ LEADS = [
 ]
 CARDS = [
     dict(n=4, region='MIDDLE EAST', place='SITRA, BAHRAIN', status='CLAIM', art='bahrain', ll=(50.6, 26.2),
-         head='Bahrain: 2 hurt; IRGC says it hit US Patriot radars', src='ABC · MEE · Reuters'),
+         head='Bahrain: 2 hurt; IRGC says it hit US radars',
+         dek="Guards claim radar hits; Bahrain: an industrial site burned.",
+         src='ABC · MEE · Reuters'),
     dict(n=5, region='AMERICAS', place='NORTH CAROLINA, US', status='CONFIRMED', art='capitol', ll=(-80.0, 36.0),
-         head='Democrats reach 258 House seats, most since 1992', src='Guardian · Al Jazeera'),
+         head='Democrats reach 258 House seats',
+         dek='Most since 1992, after Hubbard beats Foxx in a recount.',
+         src='Guardian · Al Jazeera'),
     dict(n=6, region='AFRICA', place='KHARTOUM, SUDAN', status='CONFIRMED', art='sudan', ll=(32.5, 15.6),
-         head='RSF drones kill 4 and hit a UN building', src='Al Jazeera · AFP'),
+         head='RSF drones kill 4, hit a UN building',
+         dek='Strikes hit homes and government sites around the capital.',
+         src='Al Jazeera · AFP'),
     dict(n=7, region='AFRICA', place='ITURI, DR CONGO', status='CONFIRMED', art='hospital', ll=(30.0, 1.5),
-         head='WHO: fighting traps Ebola medics for 24h+', src='Reuters · Al Jazeera'),
+         head='Fighting traps Ebola medics 24h+',
+         dek='WHO: staff sheltered in a maternity ward in Ituri.',
+         src='Reuters · Al Jazeera'),
     dict(n=8, region='ASIA-PACIFIC', place='SEOUL, S. KOREA', status='CONFIRMED', art='exam', ll=(127.0, 37.5),
-         head='Education minister quits over AI exam cheating', src='Guardian · AFP'),
+         head='Minister quits over AI exam cheating',
+         dek='Choi Kyo-jin resigns; President Lee accepts.',
+         src='Guardian · AFP'),
     dict(n=9, region='ASIA-PACIFIC', place='HONG KONG', status='CONFIRMED', art='ballot', ll=(114.2, 22.3),
-         head='98.79% turnout in Election Committee polls', src='The Standard · HK govt'),
+         head='98.79% turnout in committee polls',
+         dek='5,640 of 5,709 voters in Election Committee polls.',
+         src='The Standard · HK govt'),
     dict(n=10, region='MIDDLE EAST', place='TEHRAN, IRAN', status='CONFIRMED', art='power', ll=(51.4, 35.7),
-         head='Iran begins rolling two-hour power cuts', src='Iran Intl · The National'),
+         head='Iran starts rolling power cuts',
+         dek='About two hours at a time; war damage cut gas supply.',
+         src='Iran Intl · The National'),
     dict(n=11, region='ASIA-PACIFIC', place='WELLINGTON, NZ', status='CONFIRMED', art='cricket', ll=(174.8, -41.3),
-         head='India declare on 720/9, record Test total in NZ', src='The Statesman · IANS'),
-    dict(n=12, region='SOUTH ASIA', place='NEW DELHI, INDIA', status='CONFIRMED', art='plane', ll=(77.2, 28.6),
-         head="Nepal PM Balendra Shah lands on first India visit", src='Deccan Herald · MEA'),
-    dict(n=13, region='EUROPE', place='TURIN, ITALY', status='CONFIRMED', art='tennis', ll=(7.7, 45.1),
-         head='Alcaraz beats No 1 Zverev 6-2 7-6 for ATP Finals', src='Guardian · Reuters'),
-    dict(n=14, region='EUROPE', place='PORTIMÃO, PORTUGAL', status='CONFIRMED', art='moto', ll=(-8.5, 37.1),
-         head='Márquez seals 8th MotoGP title, equals Agostini', src='Guardian · AP'),
-    dict(n=15, region='EUROPE', place='VATICAN CITY', status='CONFIRMED', art='table', ll=(12.45, 41.9),
-         head='Pope Leo XIV hosts 1,300 poor guests for lunch', src='Vatican News · EWTN'),
+         head='India declare on a record 720/9',
+         dek='Best Test total in NZ: Rahul 136, Pant 128.',
+         src='The Statesman · IANS'),
+    dict(n=12, region='EUROPE', place='TURIN, ITALY', status='CONFIRMED', art='tennis', ll=(7.7, 45.1),
+         head='Alcaraz wins his first ATP Finals',
+         dek='Beats world No 1 Zverev 6-2, 7-6 (7) in Turin.',
+         src='Guardian · Reuters'),
+    dict(n=13, region='EUROPE', place='PORTIMÃO, PORTUGAL', status='CONFIRMED', art='moto', ll=(-8.5, 37.1),
+         head='Márquez takes 8th MotoGP title',
+         dek='Equals Agostini; Bezzecchi wins the race.',
+         src='Guardian · AP'),
 ]
 BRIEFS = [  # region, place, text, outlet, status
     ('EUROPE', 'Liverpool', '4-0 v 10-man Man United in Pochettino\'s first game', 'Guardian', 'CONFIRMED'),
+    ('EUROPE', 'Vatican', 'Pope Leo XIV hosts 1,300 poor guests for lunch', 'Vatican News', 'CONFIRMED'),
     ('EUROPE', 'Ukraine', 'Zelenskyy: ~2,700 drones, 165 missiles in a week', 'Kyiv Post', 'CONFIRMED'),
-    ('AFRICA', 'Libya', 'eastern PM Hammad asks the UN for an international probe', 'Al Jazeera', 'CONFIRMED'),
-    ('MIDDLE EAST', 'Hormuz', 'IRGC says two tankers hit sea mines; UKMTO probes', 'ABC', 'CLAIM'),
-    ('MIDDLE EAST', 'Hormuz', 'IRGC claims it downed a US MQ-1 drone; no US comment', 'IRNA', 'CLAIM'),
-    ('MIDDLE EAST', 'Iran', 'TV shows a dual-missile launcher in a "missile city"', 'Al Jazeera', 'CONFIRMED'),
-    ('MIDDLE EAST', 'Gulf', 'Saudi Arabia, Kuwait and Qatar condemn Bahrain strike', 'ABC', 'CONFIRMED'),
+    ('AFRICA', 'Libya', 'eastern PM asks the UN for an international probe', 'Al Jazeera', 'CONFIRMED'),
+    ('MIDDLE EAST', 'Hormuz', 'IRGC says two tankers hit sea mines', 'ABC', 'CLAIM'),
+    ('MIDDLE EAST', 'Hormuz', 'IRGC claims it downed a US MQ-1 drone', 'IRNA', 'CLAIM'),
+    ('MIDDLE EAST', 'Iran', 'TV shows a dual-missile launcher, "missile city"', 'Al Jazeera', 'CONFIRMED'),
     ('MIDDLE EAST', 'Yemen', 'Saudi coalition downs Houthi drone and missile', 'Al Jazeera', 'CONFIRMED'),
-    ('MIDDLE EAST', 'Israel', "Likud and Eisenkot's Yashar end unity talks, no deal", 'Al Jazeera', 'CONFIRMED'),
+    ('MIDDLE EAST', 'Israel', 'Likud and Yashar end unity talks with no deal', 'Al Jazeera', 'CONFIRMED'),
     ('AMERICAS', 'US-Iran', 'Trump "inclined" to strike again after New Year', 'The Hill', 'CONFIRMED'),
-    ('AMERICAS', 'Washington', 'spy chief Clayton backs Trump on Putin "friend"', 'Guardian', 'CONFIRMED'),
-    ('AMERICAS', 'AI chips', 'lawmakers ask how top Nvidia chips reached China', 'Fox · Guardian', 'CONFIRMED'),
-    ('AMERICAS', 'Colombia', 'government asks X to suspend ex-president Petro', 'EFE · Infobae', 'CONFIRMED'),
+    ('AMERICAS', 'Washington', 'spy chief backs Trump on Putin "friend"', 'Guardian', 'CONFIRMED'),
+    ('AMERICAS', 'AI chips', 'lawmakers ask how Nvidia chips reached China', 'Fox · Guardian', 'CONFIRMED'),
+    ('AMERICAS', 'Colombia', 'government asks X to suspend ex-president Petro', 'EFE', 'CONFIRMED'),
     ('AMERICAS', 'Mexico City', 'NFL returns: 49ers beat Vikings 35-10', 'ESPN', 'CONFIRMED'),
-    ('AMERICAS', 'Las Vegas', 'Verstappen wins GP (race 04:00 UTC), 35 lead changes', 'F1 · AJ', 'CONFIRMED'),
-    ('SOUTH ASIA', 'Bangladesh', 'garment workers try to block Dhaka highway in wage row', 'TBS', 'CONFIRMED'),
-    ('ASIA-PACIFIC', 'Taipei', 'HK film "We Are Born Good" wins Golden Horse best film', 'Focus Taiwan', 'CONFIRMED'),
-    ('ASIA-PACIFIC', 'Okinawa', 'Shuri Castle main hall restored, 7 years after fire', 'Jiji', 'CONFIRMED'),
+    ('AMERICAS', 'Las Vegas', 'Verstappen wins after 35 lead changes', 'F1 · AJ', 'CONFIRMED'),
+    ('SOUTH ASIA', 'New Delhi', 'Nepal PM Balendra Shah begins first India visit', 'Deccan Herald', 'CONFIRMED'),
+    ('SOUTH ASIA', 'Bangladesh', 'garment workers try to block Dhaka highway', 'TBS', 'CONFIRMED'),
+    ('ASIA-PACIFIC', 'Taipei', '"We Are Born Good" wins Golden Horse best film', 'Focus Taiwan', 'CONFIRMED'),
     ('ASIA-PACIFIC', 'Canberra', 'Marles says US budget office "wrong" on AUKUS', 'ABC (Aus)', 'CONFIRMED'),
     ('ASIA-PACIFIC', 'Beijing', 'calls US curb on 3 Chinese carriers "malicious"', 'Reuters', 'CONFIRMED'),
-    ('ASIA-PACIFIC', 'Sydney', 'Lowy index: US lead over China in Asia at record low', 'Lowy', 'CONFIRMED'),
-    ('GLOBAL', 'Space', 'Falcon 9 flies NRO mission 32 h after last pad launch, a record', 'Space.com', 'CONFIRMED'),
-    ('GLOBAL', 'Weapons', 'Red Cross: soon too late to regulate autonomous arms', 'Guardian', 'CONFIRMED'),
-    ('GLOBAL', 'Geneva', 'Gukesh v Sindarov world chess title match opens', 'Al Jazeera', 'CONFIRMED'),
-    ('GLOBAL', 'Climate', 'Guterres: "no ambiguity in the science" after COP31', 'UN News', 'CONFIRMED'),
+    ('GLOBAL', 'Space', 'Falcon 9 relaunches from one pad in 32 h, a record', 'Space.com', 'CONFIRMED'),
+    ('GLOBAL', 'Weapons', 'Red Cross: soon too late to regulate killer robots', 'Guardian', 'CONFIRMED'),
 ]
 STORIES = len(LEADS) + len(CARDS) + len(BRIEFS)
-assert STORIES == 40, STORIES
+assert STORIES == 35, STORIES
 counts = {r: 0 for r in REGIONS}
 for s in LEADS + CARDS:
     counts[s['region']] += 1
@@ -207,51 +220,60 @@ text(14, 3.5, 'THE WORLD IN ONE DAY  ·  FINAL EDITION: OUTCOMES, NOT PREVIEWS',
 text(W - 14, 3.5, '%d STORIES · 7 REGIONS · EVERY ONE DATED SUNDAY 22 NOVEMBER 2026' % STORIES,
      'heavy', 10.5, (255, 255, 255), 'ra')
 MAST = 'Sunday 22 November 2026'
-assert tw(MAST, 'black', 70) < 990
-text(W / 2, 22, MAST, 'black', 70, NAVY, 'ma')
-text(W / 2, 101, 'COP31 collapses with no deal  ·  Russian warship sunk at Benghazi  ·  186 drones fired at Ukraine overnight',
-     'serif', 14, RED, 'ma')
-d.line(P(14, 123, W - 14, 123), fill=INK, width=2 * S)
+assert tw(MAST, 'black', 62) < 990
+text(W / 2, 19, MAST, 'black', 62, NAVY, 'ma')
+mast_bottom = d.textbbox((W / 2 * S, 19 * S), MAST, font=font('black', 62), anchor='ma')[3] / S
+assert mast_bottom + 1 + 17 < 113, mast_bottom
+text(W / 2, mast_bottom + 1, 'COP31 collapses with no deal  ·  Russian warship sunk at Benghazi  ·  186 drones fired at '
+     'Ukraine overnight', 'serif', 14.5, RED, 'ma')
+d.line(P(14, 113, W - 14, 113), fill=INK, width=2 * S)
 
-# ------------------------------------------------------------------ day in numbers
-NUMS = [('186', 'drones fired at Ukraine overnight; 161 downed'), ('258', 'House seats for Democrats, most since 1992'),
-        ('2 days', 'COP31 overtime, then no deal'), ('98.79%', 'turnout, Hong Kong committee polls'),
-        ('720/9', "India's record Test total in New Zealand"), ('1,300', "guests at Pope Leo's lunch for the poor")]
-cw = (W - 28) / 6
-for i, (big, small) in enumerate(NUMS):
-    x = 14 + i * cw
+
+def row_label(y, h, lines):
+    rect(14, y, 92, y + h, fill=RED)
+    for j, ln in enumerate(lines):
+        text(53, y + h / 2 - 6 * len(lines) + 1 + 12 * j, ln, 'heavy', 10.5, (255, 255, 255), 'ma')
+
+
+# ------------------------------------------------------------------ the day in UTC (7 cells)
+UTC = [('01:00', 'HK polls open'), ('04:00', 'Las Vegas GP starts'), ('06:00', '161 of 186 drones downed'),
+       ('12:23', 'Falcon 9 NRO launch'), ('~13:00', 'MotoGP in Portimão'), ('~14:30', 'COP31 ends, no deal'),
+       ('~19:30', 'Alcaraz wins Turin')]
+row_label(117, 34, ['THE DAY', 'IN UTC'])
+cw = (W - 14 - 96) / len(UTC)
+for i, (t, lab) in enumerate(UTC):
+    x = 96 + i * cw
     if i:
-        d.line(P(x, 128, x, 166), fill=RULE, width=S)
-    text(x + cw / 2, 124, big, 'black', 21, RED, 'ma')
-    for j, ln in enumerate(wrap(small, 'med', 9.5, cw - 12)):
-        assert j < 2, small
-        text(x + cw / 2, 149 + j * 9.5, ln, 'med', 9.5, GREY, 'ma')
+        d.line(P(x, 119, x, 149), fill=RULE, width=S)
+    text(x + cw / 2, 117, t, 'black', 14, INK, 'ma')
+    assert tw(lab, 'med', 10) < cw - 4, lab
+    text(x + cw / 2, 137, lab, 'med', 10, GREY, 'ma')
+d.line(P(14, 154, W - 14, 154), fill=RULE, width=S)
+
+# ------------------------------------------------------------------ the day in numbers (6 cells)
+NUMS = [('186', 'drones fired at Ukraine'), ('258', 'Democratic House seats'), ('2 days', 'COP31 overtime, no deal'),
+        ('98.79%', 'Hong Kong poll turnout'), ('720/9', "India's record in NZ"), ('1,300', "Pope's guests at lunch")]
+row_label(158, 34, ['THE DAY IN', 'NUMBERS'])
+cw = (W - 14 - 96) / len(NUMS)
+for i, (big, small) in enumerate(NUMS):
+    x = 96 + i * cw
+    if i:
+        d.line(P(x, 160, x, 190), fill=RULE, width=S)
+    text(x + cw / 2, 156, big, 'black', 18, RED, 'ma')
+    assert tw(small, 'med', 10) < cw - 4, small
+    text(x + cw / 2, 179, small, 'med', 10, GREY, 'ma')
 
 # ------------------------------------------------------------------ region bar (width = share of stories)
 x = 14
 for i, (reg, c) in enumerate(REGIONS.items()):
     w = (W - 28) * counts[reg] / STORIES
-    rect(x, 171, x + w, 186, fill=c)
+    rect(x, 196, x + w, 210, fill=c)
     lab = '%s %d' % (reg, counts[reg])
     if tw(lab, 'heavy', 9.5) > w - 6:
         lab = '%s %d' % ({'SOUTH ASIA': 'S. ASIA', 'ASIA-PACIFIC': 'ASIA-PAC'}.get(reg, reg[:4]), counts[reg])
     assert tw(lab, 'heavy', 9.5) <= w - 4, lab
-    text(x + w / 2, 172.5, lab, 'heavy', 9.5, (255, 255, 255), 'ma')
+    text(x + w / 2, 197, lab, 'heavy', 9.5, (255, 255, 255), 'ma')
     x += w
-
-# ------------------------------------------------------------------ UTC strip
-rect(14, 190, W - 14, 208, fill=NAVY)
-text(22, 193.5, 'THE DAY IN UTC', 'heavy', 10, (240, 200, 100))
-UTC = [('01:00', 'HK polls open'), ('04:00', 'Las Vegas GP starts'), ('06:00', 'Kyiv: 161 of 186 drones downed'),
-       ('~13:00', 'MotoGP Portimão'), ('~14:30', 'COP31 ends, no deal'), ('~19:15', 'US House: 258th seat'),
-       ('~19:30', 'Alcaraz wins Turin')]
-x = 108
-for t, lab in UTC:
-    text(x, 193.5, t, 'heavy', 10, (240, 200, 100))
-    x += tw(t, 'heavy', 10) + 4
-    text(x, 193.5, lab, 'demi', 10, (255, 255, 255))
-    x += tw(lab, 'demi', 10) + 13
-assert x < W - 10, x
 
 
 # ------------------------------------------------------------------ drawings
@@ -351,7 +373,8 @@ def art_bahrain(x, y, w, h):
         ell(cx, y + h - 26, 13, 4, fill=(240, 240, 234))
     for fx, fh in [(56, 16), (92, 12)]:
         poly([(x + fx - 7, y + h - 26), (x + fx, y + h - 26 - fh), (x + fx + 7, y + h - 26)], (245, 140, 40))
-    line([(x + w - 10, y + 6), (x + 70, y + h - 32)], (255, 170, 60), 1.5)
+    line([(x + w - 60, y + 6), (x + 70, y + h - 32)], (255, 170, 60), 1.5)
+    text(x + w - 8, y + 6, '2 hurt', 'black', 17, (255, 255, 255), 'ra')
 
 
 def art_capitol(x, y, w, h):
@@ -371,9 +394,10 @@ def art_sudan(x, y, w, h):
         rect(bx, y + h - bh, bx + bw, y + h, fill=(196, 164, 120) if k != 3 else (150, 120, 90))
     rect(x + 82, y + h - 28, x + 108, y + h, fill=(240, 240, 240), outline=GREY, width=0.8)
     text(x + 95, y + h - 25, 'UN', 'heavy', 9, (40, 110, 190), 'ma')
-    dx, dy = x + w - 40, y + 12
+    dx, dy = x + 128, y + 12
     poly([(dx - 16, dy), (dx + 16, dy - 3), (dx + 16, dy + 3)], (60, 60, 60))
     line([(dx - 6, dy - 8), (dx - 6, dy + 8)], (60, 60, 60), 2)
+    text(x + w - 8, y + 22, '4 dead', 'black', 17, (150, 40, 30), 'ra')
 
 
 def art_hospital(x, y, w, h):
@@ -473,43 +497,46 @@ def draw_art(key, x, y, w, h):
     img.paste(inside, box[:2])
 
 # ------------------------------------------------------------------ leads
-LY = 214
+LY = 216
 LW = (W - 28 - 24) / 3
 for i, L in enumerate(LEADS):
     x = 14 + i * (LW + 12)
     c = REGIONS[L['region']]
     rect(x, LY, x + LW, 446, fill=CARD, outline=RULE, width=1)
-    draw_art(L['art'], x, LY, LW, 106)
+    draw_art(L['art'], x, LY, LW, 104)
     rect(x, LY, x + LW, LY + 3, fill=c)
-    badge(x + 6, LY + 84, L['n'], c)
-    chip(x + LW - 6, LY + 90, L['status'], STATUS[L['status']], right=True)
-    text(x + 8, LY + 111, L['place'], 'heavy', 10, c)
-    yy = para(x + 8, LY + 124, L['head'], 'serif', 19, LW - 16, 22, INK, 2)
-    yy = para(x + 8, yy + 3, L['dek'], 'reg', 11.5, LW - 16, 14, (44, 46, 52), 4)
+    badge(x + 6, LY + 82, L['n'], c)
+    chip(x + LW - 6, LY + 88, L['status'], STATUS[L['status']], right=True)
+    text(x + 8, LY + 108, L['place'], 'heavy', 10.5, c)
+    yy = para(x + 8, LY + 121, L['head'], 'serif', 21, LW - 16, 23, INK, 2)
+    yy = para(x + 8, yy + 2, L['dek'], 'reg', 11.5, LW - 16, 13.8, (44, 46, 52), 3)
+    assert yy <= 432, (L['head'], yy)
     text(x + 8, 432, L['src'], 'med', 9.5, GREY)
 
-# ------------------------------------------------------------------ cards
+# ------------------------------------------------------------------ cards (5 per row, each with a dek and its sources)
 CY = 452
-CWD = (W - 28 - 5 * 6) / 6
+CWD = (W - 28 - 4 * 7) / 5
 for k, C in enumerate(CARDS):
-    col, row = k % 6, k // 6
-    x = 14 + col * (CWD + 6)
-    y = CY + row * 134
+    col, row = k % 5, k // 5
+    x = 14 + col * (CWD + 7)
+    y = CY + row * 154
     c = REGIONS[C['region']]
-    rect(x, y, x + CWD, y + 128, fill=CARD, outline=RULE, width=1)
-    draw_art(C['art'], x, y, CWD, 48)
+    rect(x, y, x + CWD, y + 148, fill=CARD, outline=RULE, width=1)
+    draw_art(C['art'], x, y, CWD, 54)
     rect(x, y, x + CWD, y + 3, fill=c)
-    badge(x + 4, y + 30, C['n'], c)
+    badge(x + 5, y + 34, C['n'], c)
     if C['status'] != 'CONFIRMED':
-        chip(x + CWD - 4, y + 33, C['status'], STATUS[C['status']], right=True)
-    text(x + 6, y + 52, C['place'], 'heavy', 9, c)
-    para(x + 6, y + 64, C['head'], 'serif', 12.5, CWD - 12, 14.5, INK, 3)
-    text(x + 6, y + 114, C['src'], 'med', 8.5, GREY)
+        chip(x + CWD - 5, y + 38, C['status'], STATUS[C['status']], right=True)
+    text(x + 7, y + 58, C['place'], 'heavy', 10, c)
+    yy = para(x + 7, y + 71, C['head'], 'serif', 14.5, CWD - 14, 16.5, INK, 2)
+    yy = para(x + 7, yy + 2, C['dek'], 'reg', 10.5, CWD - 14, 12.5, (44, 46, 52), 3)
+    assert yy <= y + 134, (C['head'], yy - y)
+    text(x + 7, y + 134, C['src'], 'med', 9, GREY)
 
 # ------------------------------------------------------------------ map with numbered pins
-MX0, MY0, MW, MH = 14, 738, 300, 182
-text(MX0, 722, 'WHERE IT HAPPENED', 'heavy', 11, NAVY)
-text(MX0 + 110, 723.5, 'pins = story numbers 1-15', 'med', 9, GREY)
+MX0, MY0, MW, MH = 14, 778, 300, 156
+text(MX0, 762, 'WHERE IT HAPPENED', 'heavy', 11.5, NAVY)
+text(MX0 + 116, 763.5, 'pins = story numbers 1-13', 'med', 9.5, GREY)
 rect(MX0, MY0, MX0 + MW, MY0 + MH, fill=(226, 234, 242))
 LON0, LON1, LAT0, LAT1 = -170, 180, -50, 78
 
@@ -574,38 +601,37 @@ for px, py, ox, oy, s in pins:
 
 # ------------------------------------------------------------------ briefs
 BX = 330
-text(BX, 722, 'ALSO ON SUNDAY 22 NOVEMBER — %d MORE STORIES' % len(BRIEFS), 'heavy', 11, NAVY)
+text(BX, 762, 'ALSO ON SUNDAY 22 NOVEMBER — %d MORE STORIES' % len(BRIEFS), 'heavy', 11.5, NAVY)
 BCW = (W - 14 - BX - 12) / 2
 for k, (reg, place, body, outlet, status) in enumerate(BRIEFS):
-    col, row = k // 13, k % 13
+    col, row = k // 11, k % 11
     x = BX + col * (BCW + 12)
-    y = 739 + row * 14.2
+    y = 779 + row * 14.6
     c = REGIONS[reg]
-    n = 16 + k
-    text(x, y, str(n), 'heavy', 10.5, c)
-    xx = x + 16
-    text(xx, y, place + ':', 'bold', 10.5, c)
-    xx += tw(place + ': ', 'bold', 10.5)
-    text(xx, y, body, 'med', 10.5, INK)
-    xx += tw(body + ' ', 'med', 10.5)
+    n = 14 + k
+    text(x, y, str(n), 'heavy', 11.5, c)
+    xx = x + 17
+    text(xx, y, place + ':', 'bold', 11.5, c)
+    xx += tw(place + ': ', 'bold', 11.5)
+    text(xx, y, body, 'med', 11.5, INK)
+    xx += tw(body + ' ', 'med', 11.5)
     tag = outlet + (' · CLAIM' if status == 'CLAIM' else '')
-    text(xx, y + 0.5, tag, 'med', 9, ORANGE if status == 'CLAIM' else GREY)
+    text(xx, y + 1, tag, 'med', 9, ORANGE if status == 'CLAIM' else GREY)
     xx += tw(tag, 'med', 9)
     assert xx <= x + BCW + 1, (body, xx - x - BCW)
 
 # ------------------------------------------------------------------ date check and footer
-rect(14, 926, W - 14, 990, fill=(253, 240, 238), outline=RED, width=1.5)
-text(22, 931, 'DATE CHECK', 'heavy', 12, RED)
-text(100, 932, 'Every story happened, or was first reported, on Sunday 22 Nov 2026 (UTC or local time). Final edition: '
+rect(14, 940, W - 14, 994, fill=(253, 240, 238), outline=RED, width=1.5)
+text(22, 944.5, 'DATE CHECK', 'heavy', 12, RED)
+text(100, 945.5, 'Every story happened, or was first reported, on Sunday 22 Nov 2026 (UTC or local time). Final edition: '
      'results read to the end of the day, so outcomes are shown, not previews.', 'med', 10.5, INK)
-text(22, 947, 'LEFT OUT AS EARLIER NEWS:', 'heavy', 10, RED)
-para(150, 947, "Somalia expels UAE envoy (Thu 19) · Estonia to shut Russia road crossings (Fri 20) · Nigeria funeral-boat "
-     "capsizing (Fri 20) · Bolsonaro taken into intensive care (Fri 20) · Brazil Tupanciretã storm (Fri 20) · 'El Chapo "
-     "Isidro' captured in Sinaloa (Sat 21) · Indonesia candy-factory fire broke out (Sat 21) · Sparta II hit by drone off "
-     "Finland (Sat 21) · Fukushima snow strands ~1,400 (Sat 21) · Palawan M5.9 quake (Sat 21) · West Bank settler arson "
-     "(Sat night) · NWSL final (Sat 21)", 'med', 10, W - 14 - 156, 12.5, INK, 3)
+text(22, 959, 'LEFT OUT AS EARLIER NEWS:', 'heavy', 10, RED)
+para(150, 959.5, "Somalia expels UAE envoy (Thu 19) · Estonia to shut Russia crossings (Fri 20) · Nigeria funeral boat "
+     "(Fri 20) · Bolsonaro into intensive care (Fri 20) · Brazil storm (Fri 20) · 'El Chapo Isidro' caught (Sat 21) · "
+     "Indonesia candy-factory fire (Sat 21) · Sparta II drone hit (Sat 21) · Fukushima snow (Sat 21) · Palawan quake "
+     "(Sat 21) · West Bank arson (Sat night)", 'med', 10, W - 14 - 156, 12, INK, 2)
 x = 14
-y = 996
+y = 998
 for reg, c in REGIONS.items():
     ell(x + 4, y + 5, 4, 4, fill=c)
     text(x + 11, y, reg, 'bold', 9.5, INK)
@@ -616,7 +642,7 @@ for lab, col, desc in [('CONFIRMED', GREEN, '2+ outlets or on the record'), ('CL
     text(x, y, desc, 'reg', 9.5, INK)
     x += tw(desc, 'reg', 9.5) + 10
 assert x < W - 10, x
-text(14, 1010, 'Sources: Reuters, AP, AFP, EFE, Al Jazeera, The Guardian, NPR, UN News, ABC, Kyiv Post, The Standard, Focus Taiwan, '
+text(14, 1011, 'Sources: Reuters, AP, AFP, EFE, Al Jazeera, The Guardian, NPR, UN News, ABC, Kyiv Post, The Standard, Focus Taiwan, '
      'Vatican News, ESPN and others named on each story (full list in FACTS.md). Pictures and map: original, drawn in code.',
      'reg', 8.5, GREY)
 
